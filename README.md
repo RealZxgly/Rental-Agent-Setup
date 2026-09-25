@@ -17,7 +17,7 @@ A Windows desktop app that turns rental-analysis lead emails into a PDF report a
 ## Install
 
 1. Run `RentalAgentSetup.exe`.
-2. If Windows shows **"Windows protected your PC"**, click **More info → Run anyway**. This appears because the app isn't code-signed.
+2. If Windows shows **"Windows protected your PC"**, click **More info → Run anyway**. This appears because the app isn't code-signed; it's normal for small independent apps.
 3. Click **Next → Install**. No administrator rights are needed.
 4. Open **Rental Agent** from the Start menu or the desktop shortcut.
 
@@ -25,7 +25,7 @@ A Windows desktop app that turns rental-analysis lead emails into a PDF report a
 
 ## First-time sign-in
 
-1. Click **Sign in with Google** in the top-right corner.
+1. Click **Sign in with Google** at the bottom of the side panel.
 2. A browser tab opens. Choose your Google account.
 3. If you see **"Google hasn't verified this app"**, click **Advanced → Go to Rental Agent**.
 4. Allow both permissions:
@@ -33,13 +33,23 @@ A Windows desktop app that turns rental-analysis lead emails into a PDF report a
    - **Send email on your behalf**, to send the report
 5. Go back to the app. It shows **Signed in as your@email.com**.
 
-You only need to do this once; the app remembers you. To use a different Gmail, click **Switch account**.
+You only need to do this once; the app remembers you. To use a different Gmail, go to **Settings → Switch Account**.
 
 > If sign-in says **"Access blocked"**, your Google account hasn't been approved for the app yet. Contact the app administrator to be added.
 
 ---
 
-## How to use
+## The side panel
+
+| | |
+|---|---|
+| **⌂ Rental Agent** | Find lead emails, generate reports, and send them |
+| **▤ Reports** | Every report you've made, and who it was sent to |
+| **⚙ Settings** | Theme, Google account, updates, and reports folder |
+
+---
+
+## Rental Agent
 
 ### 1. Find the lead email
 - Type part of the email subject (default: `Free Rental Analysis`).
@@ -50,7 +60,6 @@ You only need to do this once; the app remembers you. To use a different Gmail, 
 - Select an email, then click **Generate Report** (or double-click the email).
 - The app shows the lead's details, a lead status (**HOT**, **WARM**, **INVESTOR**, or **MANUAL REVIEW**), and the 12-month revenue projection.
 - **View Report** opens the PDF.
-- **Reports Folder** opens all saved reports.
 
 If an email is missing required information (address, property type, bedrooms, bathrooms, or max guests), the lead is marked **MANUAL REVIEW** and no report is created.
 
@@ -61,19 +70,33 @@ If an email is missing required information (address, property type, bedrooms, b
 
 ---
 
-## Dark mode
+## Reports
 
-Click **☾ Dark mode** / **☀ Light mode** in the top-right corner to switch themes. Your choice is remembered.
+Every report you generate is listed here, newest first, with the lead's name, the property, the lead status, and who it was sent to and when.
+
+- **Search**: type a name, address, email, or status to filter the list.
+- **Open**: view the PDF (or double-click the row).
+- **Email This Report**: loads the report into the email form on the Rental Agent page, so you can send it again or to someone else.
+- **Delete**: permanently removes the report.
+
+---
+
+## Settings
+
+- **Appearance**: switch between **☀ Light** and **☾ Dark**. Your choice is remembered.
+- **Google account**: see which Gmail is signed in, **Switch Account**, or **Sign out**.
+- **Updates**: see your version and **Check for Updates**.
+- **Reports folder**: see where PDFs are saved and open the folder.
 
 ---
 
 ## Updates
 
-The app checks for new versions each time it opens. When one is available, a yellow **⬆ Update to vX.X.X** button appears in the top-right corner.
+The app checks for new versions each time it opens. When one is available, a yellow **⬆ Update to vX.X.X** button appears at the bottom of the side panel.
 
 Click it and the app downloads the update, installs it, and reopens automatically. You don't need to uninstall anything, and your sign-in, theme, and reports are kept.
 
-The current version is shown in the bottom-right corner of the app.
+The current version is shown at the bottom of the side panel and in **Settings**.
 
 ---
 
@@ -82,7 +105,7 @@ The current version is shown in the bottom-right corner of the app.
 | What | Location |
 |---|---|
 | PDF reports | `Documents\Rental Agent Reports` |
-| Sign-in and settings | `%APPDATA%\RentalAgent` |
+| Sign-in, settings, report history | `%APPDATA%\RentalAgent` |
 
 ---
 
