@@ -1,8 +1,8 @@
 # Rental Agent
 
-A Windows desktop app that turns rental-analysis lead emails into a PDF report and emails it back to the lead, all from one window.
+A Windows app that turns property evaluation form submissions into revenue dashboards and branded PDF reports.
 
-**Search Gmail → Generate the report → Send it**
+**Upload your submissions file → see every property's revenue potential → download the PDF report**
 
 ---
 
@@ -10,7 +10,7 @@ A Windows desktop app that turns rental-analysis lead emails into a PDF report a
 
 👉 **[Download the latest version](../../releases/latest)**. Under **Assets**, click `RentalAgentSetup.exe`.
 
-**Requirements:** Windows 10 or 11 and a Gmail / Google account.
+**Requirements:** Windows 10 or 11 (uses Microsoft Edge, which comes with Windows).
 
 ---
 
@@ -21,82 +21,78 @@ A Windows desktop app that turns rental-analysis lead emails into a PDF report a
 3. Click **Next → Install**. No administrator rights are needed.
 4. Open **Rental Agent** from the Start menu or the desktop shortcut.
 
----
-
-## First-time sign-in
-
-1. Click **Sign in with Google** at the bottom of the side panel.
-2. A browser tab opens. Choose your Google account.
-3. If you see **"Google hasn't verified this app"**, click **Advanced → Go to Rental Agent**.
-4. Allow both permissions:
-   - **Read your email**, to find lead emails
-   - **Send email on your behalf**, to send the report
-5. Go back to the app. It shows **Signed in as your@email.com**.
-
-You only need to do this once; the app remembers you. To use a different Gmail, go to **Settings → Switch Account**.
-
-> If sign-in says **"Access blocked"**, your Google account hasn't been approved for the app yet. Contact the app administrator to be added.
+No sign-in or account is needed.
 
 ---
 
-## The side panel
+## Home
+
+The app opens on your dashboards. Pick one, drop in your CSV file, and it does the rest.
 
 | | |
 |---|---|
-| **⌂ Rental Agent** | Find lead emails, generate reports, and send them |
-| **▤ Reports** | Every report you've made, and who it was sent to |
-| **⚙ Settings** | Theme, Google account, updates, and reports folder |
+| **NWTFI Sales & Marketing Report** | Upload submissions and see each property's evaluation |
 
 ---
 
-## Rental Agent
+## NWTFI Sales & Marketing Report
 
-### 1. Find the lead email
-- Type part of the email subject (default: `Free Rental Analysis`).
-- Optionally, type the sender's address.
-- Click **Search Gmail**. Matching emails appear newest first.
+### 1. Upload the submissions file
+Click **Launch dashboard**, then drop your file on the upload box or click **Choose File**.
 
-### 2. Generate the report
-- Select an email, then click **Generate Report** (or double-click the email).
-- The app shows the lead's details, a lead status (**HOT**, **WARM**, **INVESTOR**, or **MANUAL REVIEW**), and the 12-month revenue projection.
-- **View Report** opens the PDF.
+- **CSV** or **Excel (.xlsx)**. You can select or drop **several files at once**.
+- A file can be **one property** (labels in column A, answers in column B, like the evaluation email) or **many properties** (one row each, column names in the first row).
+- Labels are matched automatically (Property Type, Bedrooms, Bathrooms, Zip Code, Amenities, Email, and so on), even if they're spelled a bit differently.
+- Not sure about the layout? Click **Download the CSV template** for one example property.
+- Got new submissions later? Click **+ Add files** on the overview. A submission that's already loaded (same Submission ID) is updated, not duplicated.
 
-If an email is missing required information (address, property type, bedrooms, bathrooms, or max guests), the lead is marked **MANUAL REVIEW** and no report is created.
+If you upload **one property**, its report opens straight away. Several properties open the overview first.
 
-### 3. Email the report
-- The **To** box is filled in with the lead's email automatically. You can change it.
-- Edit the **Subject** and **Message** if you like.
-- Click **Send Email**. The PDF is attached and sent from your Gmail account.
+Nothing is saved: pressing **Home** (or closing the app) clears the loaded file. Use **⇪ Open another file** on a property to load a different one.
+
+### 2. The overview
+- **KPI cards:** submissions, hot leads, pipeline revenue, average per property, average nightly rate, average lead score, local market coverage, and leads that need review.
+- **Charts:** expected revenue by property, lead status, revenue range per property, and revenue by market.
+- **All Submissions table:** search by name, ZIP, market or status. Click a row to open that property.
+
+### 3. A property's evaluation
+- **Property Summary:** a plain-English summary of revenue, pricing, a comparison with current income, notes, and suggested next steps.
+- **KPI cards:** expected and optimized revenue, nightly rate, occupancy, owner net, lead score, market and confidence.
+- **Key Numbers:** average monthly revenue and owner income, best and slowest month, break-even nights, nights needed to match today's income, revenue per bedroom, and nightly rate vs. the local market.
+- **Owner & Contact:** name, email and phone with Copy buttons, timeline and submission details.
+- **Lead Score Breakdown:** how many points the timeline, condition, rental rules, availability and revenue each scored.
+- **Charts:** revenue by month, three scenarios, what shapes the nightly rate, and where each revenue dollar goes.
+- **Month by Month** and **Scenario Breakdown** tables: nights, rate and revenue per month, and fees, costs and owner income per scenario.
+- **Submitted Answers:** exactly what the owner filled in.
+- **⬇ Download PDF report** creates the branded report and opens it.
+
+Use **⬇ Download all PDF reports** on the overview to make a report for every property at once.
+
+### Lead status
+| Status | Meaning |
+|---|---|
+| **HOT** | Score 70+, contact first |
+| **WARM** | Score 45–69, follow up this week |
+| **NURTURE** | Under 45, add to the follow-up list |
+| **INVESTOR** | Mentions buying or investing |
+| **Manual review** | Missing answers, or short-term rentals not allowed |
+
+### Local market data
+When a submission includes a **ZIP code**, the evaluation uses that area's short-term rental averages (AirDNA) and its busy season. Florida markets peak in winter, for example. ZIPs outside the built-in market list use U.S. averages, and the evaluation says so.
 
 ---
 
-## Reports
+## Dark mode
 
-Every report you generate is listed here, newest first, with the lead's name, the property, the lead status, and who it was sent to and when.
-
-- **Search**: type a name, address, email, or status to filter the list.
-- **Open**: view the PDF (or double-click the row).
-- **Email This Report**: loads the report into the email form on the Rental Agent page, so you can send it again or to someone else.
-- **Delete**: permanently removes the report.
-
----
-
-## Settings
-
-- **Appearance**: switch between **☀ Light** and **☾ Dark**. Your choice is remembered.
-- **Google account**: see which Gmail is signed in, **Switch Account**, or **Sign out**.
-- **Updates**: see your version and **Check for Updates**.
-- **Reports folder**: see where PDFs are saved and open the folder.
+Open **Settings** (top right) and choose **Light** or **Dark**. Your choice is remembered.
 
 ---
 
 ## Updates
 
-The app checks for new versions each time it opens. When one is available, a yellow **⬆ Update to vX.X.X** button appears at the bottom of the side panel.
+The app checks for new versions each time it opens. When one is available, a yellow bar appears at the top: click **Update now** and the app downloads the update, closes its window, installs the new version over the old one, and reopens. Only one copy stays installed, and your saved PDF reports are kept.
 
-Click it and the app downloads the update, installs it, and reopens automatically. You don't need to uninstall anything, and your sign-in, theme, and reports are kept.
-
-The current version is shown at the bottom of the side panel and in **Settings**.
+You can also use **Settings → Check for updates**.
 
 ---
 
@@ -104,25 +100,20 @@ The current version is shown at the bottom of the side panel and in **Settings**
 
 | What | Location |
 |---|---|
-| PDF reports | `Documents\Rental Agent Reports` |
-| Sign-in, settings, report history | `%APPDATA%\RentalAgent` |
+| PDF reports and the CSV template | `Documents\Rental Agent Reports` |
+| Settings (theme) | `%APPDATA%\RentalAgent` |
 
 ---
 
 ## Privacy
 
-- The app connects **only** to your own Gmail account, using Google's official sign-in.
-- Your password is never seen or stored by the app.
-- Emails are read and sent directly between your computer and Google. Nothing is sent to any other server.
-- You can remove the app's access at any time at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
+Everything runs on your computer. Uploaded files and reports are never sent anywhere. The only internet connection is the update check.
 
 ---
 
 ## Uninstall
 
-**Settings → Apps → Installed apps → Rental Agent → Uninstall.**
-
-Your reports in `Documents\Rental Agent Reports` are not deleted.
+**Settings → Apps → Installed apps → Rental Agent → Uninstall.** Your reports in `Documents\Rental Agent Reports` are not deleted.
 
 ---
 
@@ -131,10 +122,10 @@ Your reports in `Documents\Rental Agent Reports` are not deleted.
 | Problem | Fix |
 |---|---|
 | "Windows protected your PC" | Click **More info → Run anyway** |
-| "Access blocked" on Google sign-in | Your account needs to be approved; contact the administrator |
-| App says "Not signed in" again | Your sign-in expired. Click **Sign in with Google** |
-| No emails found | Check the subject text matches the lead emails, or clear the **From** box |
-| Report didn't open | Make sure a PDF viewer is installed (Microsoft Edge works) |
+| "Couldn't find the form's columns" | Make sure the first row has the column names, or start from the CSV template |
+| Old `.xls` Excel file | In Excel, use **File → Save As** and choose **CSV** or **.xlsx** |
+| A property shows "Manual review" | It's missing Property Type, Bedrooms or Email. Fill them in and upload again |
+| The window didn't open | Make sure Microsoft Edge is installed (it comes with Windows), then open the app again |
 
 ---
 
