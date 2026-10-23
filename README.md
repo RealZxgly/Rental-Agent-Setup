@@ -31,16 +31,17 @@ The app opens on your dashboards. Pick one, drop in your CSV file, and it does t
 
 | | |
 |---|---|
-| **NWTFI Sales & Marketing Report** | Upload submissions and see each property's evaluation |
+| **Short Term Rental Analysis** | Upload submissions and see each property's evaluation |
 
 ---
 
-## NWTFI Sales & Marketing Report
+## Short Term Rental Analysis
 
 ### 1. Upload the submissions file
 Click **Launch dashboard**, then drop your file on the upload box or click **Choose File**.
 
-- **CSV** or **Excel (.xlsx)**. You can select or drop **several files at once**.
+- **CSV**, **Excel (.xlsx)** or **PDF**. You can select or drop **several files at once**.
+- A PDF must have real text (not a scanned image), with each label next to its answer, like the CSV template.
 - A file can be **one property** (labels in column A, answers in column B, like the evaluation email) or **many properties** (one row each, column names in the first row).
 - Labels are matched automatically (Property Type, Bedrooms, Bathrooms, Zip Code, Amenities, Email, and so on), even if they're spelled a bit differently.
 - Not sure about the layout? Click **Download the CSV template** for one example property.
@@ -61,6 +62,7 @@ Nothing is saved: pressing **Home** (or closing the app) clears the loaded file.
 - **Key Numbers:** average monthly revenue and owner income, best and slowest month, break-even nights, nights needed to match today's income, revenue per bedroom, and nightly rate vs. the local market.
 - **Owner & Contact:** name, email and phone with Copy buttons, timeline and submission details.
 - **Lead Score Breakdown:** how many points the timeline, condition, rental rules, availability and revenue each scored.
+- **How This Was Calculated:** step by step, with this property's real numbers: the local price per night, how each answer moves it, how many nights get booked, each month, and what the owner keeps after fees and costs.
 - **Charts:** revenue by month, three scenarios, what shapes the nightly rate, and where each revenue dollar goes.
 - **Month by Month** and **Scenario Breakdown** tables: nights, rate and revenue per month, and fees, costs and owner income per scenario.
 - **Submitted Answers:** exactly what the owner filled in.
@@ -76,6 +78,9 @@ Use **⬇ Download all PDF reports** on the overview to make a report for every 
 | **NURTURE** | Under 45, add to the follow-up list |
 | **INVESTOR** | Mentions buying or investing |
 | **Manual review** | Missing answers, or short-term rentals not allowed |
+
+### How the estimate works
+Short-term rental (Airbnb-style): guests pay per night. The app starts from the real local average price per night for that number of bedrooms (from the ZIP code), adjusts it for property type, bathrooms, size, amenities and condition, estimates how many nights get booked, then adds it up by month and year. What the owner earns today is shown only for comparison and does not change the estimate.
 
 ### Local market data
 When a submission includes a **ZIP code**, the evaluation uses that area's short-term rental averages (AirDNA) and its busy season. Florida markets peak in winter, for example. ZIPs outside the built-in market list use U.S. averages, and the evaluation says so.
