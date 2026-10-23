@@ -17,7 +17,7 @@ A Windows app that turns property evaluation form submissions into revenue dashb
 ## Install
 
 1. Run `RentalAgentSetup.exe`.
-2. If Windows shows **"Windows protected your PC"**, click **More info → Run anyway**. This appears because the app isn't code-signed; it's normal for small independent apps.
+2. If Windows shows **"Windows protected your PC"**, click **More info → Run anyway**. This appears because the app isn't code-signed.
 3. Click **Next → Install**. No administrator rights are needed.
 4. Open **Rental Agent** from the Start menu or the desktop shortcut.
 
